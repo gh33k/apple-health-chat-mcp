@@ -16,7 +16,7 @@ Ask Claude natural language questions about your health data! This Model Context
 - **Comprehensive Health Metrics**: Access step count, heart rate, sleep, energy, and more
 - **Flexible Time Periods**: Ask about today, yesterday, last week, or any custom date range
 - **Automatic Data Discovery**: Scans and parses your Health Export CSV files automatically
-- **Privacy-First**: Your data stays on your device - no cloud processing
+- **Local Processing**: CSV files and MCP server run on your device (query results are sent to Claude)
 
 ## Installation
 
@@ -63,13 +63,26 @@ npm run build
    npm start
    ```
 
-## Privacy Note
+## Privacy & Data Flow
 
-**Important**: This project does not include any personal health data. The sample data files contain anonymized examples only. You must provide your own health data by:
+**Important**: This project does not include any personal health data. The sample data files contain anonymized examples only.
 
-1. Using the iOS Health Export app to export your health data
-2. Setting the `HEALTH_EXPORT_DIR` environment variable to point to your exported CSV files
-3. Ensuring your personal health data is not committed to version control (see `.gitignore`)
+### How Your Data is Handled:
+
+1. **Your CSV files**: Stored and processed locally on your device
+2. **MCP Server**: Runs locally and reads your CSV files directly
+3. **When you ask Claude questions**: 
+   - The MCP server queries your local data
+   - Query results (not raw CSV data) are sent to Claude for analysis
+   - Claude processes the results and provides insights
+
+### To Use Your Own Data:
+
+1. Use the iOS Health Export app to export your health data
+2. Set the `HEALTH_EXPORT_DIR` environment variable to point to your exported CSV files
+3. Ensure your personal health data is not committed to version control (see `.gitignore`)
+
+**Note**: While your raw CSV files never leave your device, the results of queries (like step counts, sleep hours, etc.) are sent to Claude when you ask questions.
 
 ## Configuration
 
