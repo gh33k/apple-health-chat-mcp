@@ -24,9 +24,9 @@ Ask Claude natural language questions about your Apple Health data! This MCP ser
    ```json
    {
      "mcpServers": {
-       "health-export": {
+       "apple-health-chat": {
          "command": "node",
-         "args": ["/path/to/health-export-mcp/dist/index.js"],
+         "args": ["/path/to/apple-health-chat-mcp/dist/index.js"],
          "env": {
            "HEALTH_EXPORT_DIR": "/path/to/your/health/files"
          }
@@ -78,9 +78,7 @@ MIT
 
 ## Support
 
-- [Issues](https://github.com/gh33k/health-export-mcp/issues) - Report bugs or request features
-- [Discussions](https://github.com/gh33k/health-export-mcp/discussions) - Ask questions or share ideas
-
+- [Issues](https://github.com/gh33k/apple-health-chat-mcp/issues) - Report bugs or request features
 ---
 
 **Made with ❤️ for health-conscious people who want to chat with their data**
