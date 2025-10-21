@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "health-export": {
+      "command": "node",
+      "args": ["/path/to/health-export-mcp/dist/index.js"],
+      "env": {
+        "HEALTH_EXPORT_DIR": "/path/to/your/health/export/files"
+      }
+    }
+  }
+}
