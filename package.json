@@ -1,7 +1,7 @@
 {
-  "name": "health-export-mcp",
+  "name": "apple-health-chat-mcp",
   "version": "1.0.0",
-  "description": "Model Context Protocol server for Health Export CSV files from iOS Health Export app",
+  "description": "Apple Health Chat MCP - Natural language queries for your Apple Health data",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {

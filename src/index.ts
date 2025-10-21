@@ -31,7 +31,7 @@ class HealthExportMCPServer {
   constructor() {
     this.server = new Server(
       {
-        name: 'health-export-mcp',
+        name: 'apple-health-chat-mcp',
         version: '1.0.0'
       },
       {
